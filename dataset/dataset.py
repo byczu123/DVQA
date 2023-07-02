@@ -141,7 +141,7 @@ class VideoDataset(Dataset):
         """
 
         bytes_per_frame = int(frame_height * frame_width * 1.5)
-        frame_count = os.path.getsize(file_path) / bytes_per_frame
+        frame_count = int(os.path.getsize(file_path) / bytes_per_frame)
 
         ret = []
         count = 0

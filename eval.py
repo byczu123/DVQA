@@ -72,7 +72,7 @@ if __name__=='__main__':
     dataloaders = {x: torch.utils.data.DataLoader(video_dataset[x], batch_size=1, shuffle=False, num_workers=4, drop_last=False) for x in ['test']}
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    checkpoint = torch.load(load_checkpoint)
+    checkpoint = torch.load(load_checkpoint, map_location=torch.device("cpu"))
 
     model = C3DVQANet().to(device)
     model.load_state_dict(checkpoint['model_state_dict'])

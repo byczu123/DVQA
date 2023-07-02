@@ -1,0 +1,10 @@
+{
+    "test": {
+        "dis": ["Film1_500k.yuv"],
+        "ref": ["Film1.yuv"],
+        "fps": [30],
+        "mos": [20],
+        "height": [720],
+        "width": [1280]
+    }
+}
